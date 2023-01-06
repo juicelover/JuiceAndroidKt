@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">JuiceAndroidKt</string>
+
+    <!-- Home -->
+    <string name="home_android_developers">Android Developers</string>
+
+    <!-- Developers -->
+    <string name="developers_codelabs">Codelabs</string>
+
+    <!-- DataBinding -->
+    <string name="codelabs_data_binding">DataBinding</string>
 </resources>

@@ -12,26 +12,22 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:divider="@drawable/divider_vertical"
-        app:showDividers="middle|end">
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_notice_create"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            app:title="@string/app_name"
+            android:background="@color/white"
             app:navigationIcon="@mipmap/icon_arrow_left"
-            android:background="@color/white">
+            app:title="@string/codelabs_data_binding">
 
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_android_developers"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{(v)->presenter.onClick(v)}"
-            android:padding="10dp"
-            android:text="@string/home_android_developers" />
+            android:layout_height="0.2dp"
+            android:background="@color/divider"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

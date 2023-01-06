@@ -3,6 +3,8 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        mavenCentral { url 'https://maven.aliyun.com/repository/public' }
+        maven { url "https://jitpack.io" }
     }
 }
 dependencyResolutionManagement {
@@ -10,7 +12,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenCentral { url 'https://maven.aliyun.com/repository/public' }
+        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "JuiceAndroidKt"
 include ':app'
+include ':base_lib'

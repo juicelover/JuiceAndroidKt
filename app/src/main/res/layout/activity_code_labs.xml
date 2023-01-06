@@ -20,18 +20,18 @@
             android:id="@+id/toolbar_notice_create"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            app:title="@string/app_name"
+            android:background="@color/white"
             app:navigationIcon="@mipmap/icon_arrow_left"
-            android:background="@color/white">
+            app:title="@string/developers_codelabs">
 
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_android_developers"
+            android:id="@+id/tv_data_binding"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{(v)->presenter.onClick(v)}"
             android:padding="10dp"
-            android:text="@string/home_android_developers" />
+            android:text="@string/codelabs_data_binding" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

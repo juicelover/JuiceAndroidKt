@@ -1,4 +1,4 @@
-package com.dream.juiceandroidkt
+package com.dream.juiceandroid
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme">#FFFF8000</color>
+    <color name="windowBackground">#F6F6F6</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="empty_hint_color">#999999</color>
+</resources>

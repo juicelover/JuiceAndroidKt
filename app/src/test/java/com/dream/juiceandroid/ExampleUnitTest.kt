@@ -1,4 +1,4 @@
-package com.dream.juiceandroidkt
+package com.dream.juiceandroid
 
 import org.junit.Test
 
