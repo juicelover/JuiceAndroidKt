@@ -1,40 +1,34 @@
 package com.dream.juiceandroid.developers.codelab.activity
 
-import android.content.Intent
-import android.view.View
 import com.dream.juiceandroid.R
-import com.dream.juiceandroid.databinding.ActivityCodeLabsBinding
+import com.dream.juiceandroid.databinding.ActivityDataBindingBinding
+import com.dream.juiceandroid.developers.codelab.viewModel.DataBindingViewModel
 import com.juiceandroid.base_lib.activity.BaseActivity
-import com.juiceandroid.base_lib.tool.AppTool
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class DataBindingActivity : BaseActivity<ActivityCodeLabsBinding>() {
+/**
+ * @author juice
+ * @date 2023-01-09 08:57:20
+ * @desc dataBinding
+ * @link https://developers.google.cn/codelabs/android-databinding#0
+ */
+class DataBindingActivity : BaseActivity<ActivityDataBindingBinding>() {
 
-    override fun getLayoutId(): Int = R.layout.activity_code_labs
+    private val mViewModel by viewModel<DataBindingViewModel>()
+
+    override fun getLayoutId(): Int = R.layout.activity_data_binding
 
     override fun initView() {
 
         bindingView.lifecycleOwner = this
-        bindingView.presenter = this
+        bindingView.vm = mViewModel
 
-        bindingView.toolbarNoticeCreate.apply {
+        bindingView.toolbarJuiceCreate.apply {
             setNavigationOnClickListener { finish() }
         }
     }
 
     override fun loadData(isRefresh: Boolean) {
 
-    }
-
-    override fun onClick(v: View?) {
-        v?.let {
-            AppTool.singleClick(v) {
-                when (v.id) {
-
-                    R.id.tv_data_binding -> {
-//                        startActivity(Intent(this, CodeLabsActivity::class.java))
-                    }
-                }
-            }
-        }
     }
 }

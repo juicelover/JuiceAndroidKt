@@ -28,6 +28,7 @@
         </activity>
         <activity android:name="com.dream.juiceandroid.developers.codelab.CodeLabsActivity" />
         <activity android:name="com.dream.juiceandroid.developers.AndroidDevelopersActivity" />
+        <activity android:name="com.dream.juiceandroid.developers.codelab.activity.DataBindingActivity" />
     </application>
 
 </manifest>

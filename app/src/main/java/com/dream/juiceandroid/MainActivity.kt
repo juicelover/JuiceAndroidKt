@@ -7,6 +7,11 @@ import com.dream.juiceandroid.developers.AndroidDevelopersActivity
 import com.juiceandroid.base_lib.activity.BaseActivity
 import com.juiceandroid.base_lib.tool.AppTool
 
+/**
+ * @author juice
+ * @date 2023-01-09 08:31:30
+ * @desc Home Page
+ */
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun getLayoutId(): Int = R.layout.activity_main
@@ -16,7 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         bindingView.lifecycleOwner = this
         bindingView.presenter = this
 
-        bindingView.toolbarNoticeCreate.apply {
+        bindingView.toolbarJuiceCreate.apply {
             setNavigationOnClickListener { finish() }
         }
     }

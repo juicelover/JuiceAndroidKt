@@ -4,9 +4,11 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
-            name="presenter"
-            type="com.juiceandroid.base_lib.base.Presenter" />
+            name="vm"
+            type="com.dream.juiceandroid.developers.codelab.viewModel.DataBindingViewModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -15,7 +17,7 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_notice_create"
+            android:id="@+id/toolbar_juice_create"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:background="@color/white"
@@ -27,7 +29,105 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.2dp"
-            android:background="@color/divider"/>
+            android:background="@color/divider" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/data_binding_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name_title"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="128dp"
+                android:text="@{vm.name}"
+                android:textColor="@color/textBlack"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_lastname_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/data_binding_lastname" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_lastname_title"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="128dp"
+                android:text="@{vm.lastName}"
+                android:textColor="@color/textBlack"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_likes_label"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:showLinksLabel="@{vm.likes}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_likes_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_likes_label"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:minWidth="48dp"
+                android:text="@string/data_binding_likes" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_likes"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_likes_label"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:text="@{Integer.toString(vm.likes)}" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_likes"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="@{()->vm.onLike()}"
+                android:text="@string/data_binding_like" />
+
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_like"
+                android:layout_alignStart="@+id/btn_like"
+                android:layout_alignEnd="@+id/btn_like"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:max="@{5}"
+                android:progress="@{vm.likes}" />
+        </RelativeLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

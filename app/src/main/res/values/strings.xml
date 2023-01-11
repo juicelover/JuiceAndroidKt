@@ -9,4 +9,8 @@
 
     <!-- DataBinding -->
     <string name="codelabs_data_binding">DataBinding</string>
+    <string name="data_binding_name">Name</string>
+    <string name="data_binding_lastname">Last name</string>
+    <string name="data_binding_likes">Likes</string>
+    <string name="data_binding_like">LIKE</string>
 </resources>

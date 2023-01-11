@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="divider">#CCCCCC</color>
+
+    <!-- text -->
+    <color name="textBlack">#333333</color>
+    <color name="textGray">#999999</color>
 </resources>

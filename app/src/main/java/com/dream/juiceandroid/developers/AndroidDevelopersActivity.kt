@@ -8,6 +8,12 @@ import com.dream.juiceandroid.developers.codelab.CodeLabsActivity
 import com.juiceandroid.base_lib.activity.BaseActivity
 import com.juiceandroid.base_lib.tool.AppTool
 
+/**
+ * @author juice
+ * @date 2023-01-09 08:31:15
+ * @desc Android Developers
+ * @link https://developer.android.google.cn/index.html
+ */
 class AndroidDevelopersActivity : BaseActivity<ActivityAndroidDevelopersBinding>() {
 
     override fun getLayoutId(): Int = R.layout.activity_android_developers
@@ -17,7 +23,7 @@ class AndroidDevelopersActivity : BaseActivity<ActivityAndroidDevelopersBinding>
         bindingView.lifecycleOwner = this
         bindingView.presenter = this
 
-        bindingView.toolbarNoticeCreate.apply {
+        bindingView.toolbarJuiceCreate.apply {
             setNavigationOnClickListener { finish() }
         }
     }

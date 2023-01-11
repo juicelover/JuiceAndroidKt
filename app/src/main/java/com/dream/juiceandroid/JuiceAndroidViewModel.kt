@@ -1,5 +1,6 @@
 package com.dream.juiceandroid
 
+import com.dream.juiceandroid.developers.codelab.viewModel.DataBindingViewModel
 import com.juiceandroid.base_lib.tool.keyvalue.KeyValueMgr
 import com.juiceandroid.base_lib.tool.keyvalue.MmkvKeyValueMgr
 import com.juiceandroid.base_lib.tool.network.RetrofitClient
@@ -16,7 +17,7 @@ import org.koin.dsl.module.module
  * viewModel模块
  */
 val viewModelModule = module {
-
+    viewModel<DataBindingViewModel>()
 }
 
 /**
