@@ -30,7 +30,7 @@ android {
         }
     }
 
-    buildFeatures{
+    buildFeatures {
         dataBinding = true
     }
 }
@@ -54,6 +54,7 @@ dependencies {
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
     //androidxCore
     api 'androidx.core:core-ktx:1.9.0'
+
     //lifecycle
     api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     //kotlin
@@ -93,4 +94,13 @@ dependencies {
     api 'io.github.jeremyliao:live-event-bus-x:1.8.0'
 
     api 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+
+
+    // CameraX core library using camera2 implementation
+    api "androidx.camera:camera-camera2:1.1.0-beta02"
+// CameraX Lifecycle Library
+    api "androidx.camera:camera-lifecycle:1.1.0-beta02"
+// CameraX View class
+    api "androidx.camera:camera-view:1.1.0-beta02"
+    api "androidx.concurrent:concurrent-futures-ktx:1.1.0"
 }

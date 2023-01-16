@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.View
 import com.dream.juiceandroid.R
 import com.dream.juiceandroid.databinding.ActivityCodeLabsBinding
+import com.dream.juiceandroid.developers.codelab.activity.CameraxActivity
 import com.dream.juiceandroid.developers.codelab.activity.DataBindingActivity
 import com.juiceandroid.base_lib.activity.BaseActivity
 import com.juiceandroid.base_lib.tool.AppTool
@@ -39,6 +40,10 @@ class CodeLabsActivity : BaseActivity<ActivityCodeLabsBinding>() {
 
                     R.id.tv_data_binding -> {
                         startActivity(Intent(this, DataBindingActivity::class.java))
+                    }
+
+                    R.id.tv_camerax -> {
+                        startActivity(Intent(this, CameraxActivity::class.java))
                     }
                 }
             }

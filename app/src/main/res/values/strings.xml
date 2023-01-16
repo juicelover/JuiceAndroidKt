@@ -7,10 +7,14 @@
     <!-- Developers -->
     <string name="developers_codelabs">Codelabs</string>
 
-    <!-- DataBinding -->
+    <!-- Codelabs -->
     <string name="codelabs_data_binding">DataBinding</string>
+    <string name="codelabs_camerax">CameraX</string>
+
+    <!-- DataBinding -->
     <string name="data_binding_name">Name</string>
     <string name="data_binding_lastname">Last name</string>
     <string name="data_binding_likes">Likes</string>
     <string name="data_binding_like">LIKE</string>
+    <string name="camerax_take_photo">Take Photo</string>
 </resources>
